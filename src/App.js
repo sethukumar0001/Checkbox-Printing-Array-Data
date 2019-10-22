@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ data: [{ name: 'raju', age: 19}, { name: 'ramu', age: 26 }, { name: 'ravan', age: 25 }, { name: 'laxman', age: 30 }] })
+    this.setState({ data: [{ name: 'raju', age: 20 }, { name: 'ramu', age: 21 }, { name: 'ravan', age: 25 }, { name: 'laxman', age: 30 }] })
   }
   render() {
     return (
@@ -25,13 +25,10 @@ class App extends Component {
             return <li>{item.name}-{item.age}</li>;
           })}
         </ul>
-        {/* Yes:<input type="checkbox" defaultChecked={((this.state.data.filter((data)=>{  return console.log(data.age < 18) })) === false )?this.state.checked:!this.state.checked} />
-        No:<input type="checkbox" defaultChecked={((this.state.data.filter((data)=>{  return console.log(data.age > 18) === false  })))?!this.state.checked:this.state.checked} /> */}
-        
-        Yes:<input type = "checkbox" defaultChecked = {(this.state.data.filter(data=>{ return data.age > 18}))} />
-        No:<input type = "checkbox" defaultChecked = {this.state.checked} />
+        Age Between 18 to 25:<input type="checkbox" defaultChecked={(this.state.checked)}
+        />
 
-            </div>
+      </div>
     );
   }
 }
