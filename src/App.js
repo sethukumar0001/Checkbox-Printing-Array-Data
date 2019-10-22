@@ -24,15 +24,16 @@ class App extends Component {
         {
           this.state.data.map((person,index) => {
             let checked = null;
-
             if(person.age >= 18 && person.age <= 25){
               checked = true;
             }
 
           console.log("checked"+checked);
           return(
-
+            <ul>
+          <li>{person.name}-{person.age}</li>
             <input type="checkbox" checked = {checked} key = {index} />
+            </ul>
           )
 
         })
